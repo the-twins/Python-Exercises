@@ -1,15 +1,17 @@
-def br()->str:
-    """Return a string."""
-    return "Brazil, Russia"
+def br():
+    """Print a string."""
+    print("Brazil, Russia", end = '')
     
     
-def ic()->str:
-    """Return a string."""
-    return "India, China"
+def ic():
+    """Print a string."""
+    print("India, China", end = '')
     
 
-print(br(),end=', ')
-print(ic())
-print(ic(), end=',')
+br()
+print(', ', end = '')
+ic()
 print()
-print(br())
+ic()
+print(',')
+br()

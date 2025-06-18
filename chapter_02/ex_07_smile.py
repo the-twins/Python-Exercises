@@ -1,8 +1,13 @@
-def smile()->str:
-    """Return a string."""
-    return "Smile!"
+def smile():
+    """Print a string."""
+    print("Smile!", end = '')
     
     
-print(smile(), smile(), smile())
-print(smile(), smile())
-print(smile())
+smile()
+smile()
+smile()
+print()
+smile()
+smile()
+print()
+smile()
