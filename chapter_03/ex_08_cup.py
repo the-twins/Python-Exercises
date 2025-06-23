@@ -1,10 +1,10 @@
-cup_in_pint = 2.0
-ounc_in_cup = 8.0
-tablespoons_in_ounc = 2.0
-teaspoons_in_tablespoon = 3.0
+CUP_IN_PINT = 2.0
+OUNC_IN_CUP = 8.0
+TABLESPOON_IN_OUNC = 2.0
+TEASPOON_IN_TABLESPOON = 3.0
 print('Enter volume in cups: ')
 volume = float(input())
-print('In pints =', volume / cup_in_pint)
-print('In ounces =', volume * ounc_in_cup)
-print('In tablespoons =', volume * ounc_in_cup * tablespoons_in_ounc)
-print('In tablespoons =', volume * ounc_in_cup * tablespoons_in_ounc * teaspoons_in_tablespoon)
+print('In pints =', volume / CUP_IN_PINT)
+print('In ounces =', volume * OUNC_IN_CUP)
+print('In tablespoons =', volume * OUNC_IN_CUP * TABLESPOON_IN_OUNC)
+print('In tablespoons =', volume * OUNC_IN_CUP * TABLESPOON_IN_OUNC * TEASPOON_IN_TABLESPOON)
