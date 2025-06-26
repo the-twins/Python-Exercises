@@ -1,10 +1,10 @@
-FOOT_IN_CM = 30.48
-INCH_IN_CM = 2.54
+INCH_IN_FOOT = 12
+CM_IN_INCH = 2.54
 print('Enter a height in centimeters: ')
 cm = float(input())
 while(cm > 0):
-    print(cm,'cm =', cm // FOOT_IN_CM, 'feet,', 
-         (cm - (cm // FOOT_IN_CM) * FOOT_IN_CM) / INCH_IN_CM, 'inches')
+    inch = cm / CM_IN_INCH
+    print(cm,'cm =', inch // INCH_IN_FOOT, 'feet,', inch % INCH_IN_FOOT, 'inches')
     print('Enter a height in centimeters (<= 0 to quit): ')
     cm = float(input())
 print('Bye.')
