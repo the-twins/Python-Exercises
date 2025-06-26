@@ -19,6 +19,3 @@ temp_fahr = get_input()
 while temp_fahr is not None:
     temperatures(temp_fahr)
     temp_fahr = get_input()
-    
-    
-    
