@@ -1,0 +1,10 @@
+print('This program computes moduli.')
+print('Enter an integer to serve as the second operand: ')
+second_operand = int(input())
+print('Now enter the first operand: ')
+first_operand = int(input())
+while(first_operand > 0):
+    print(first_operand, '%', second_operand, '=', first_operand % second_operand)
+    print('Enter next number for first operand (<=0 to quit): ')
+    first_operand = int(input())
+print('Done.')
