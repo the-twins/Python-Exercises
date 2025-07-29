@@ -1,6 +1,6 @@
-print("Enter upper limit: ")
-up_limit = int(input())
 print("Enter lower limit: ")
+up_limit = int(input())
+print("Enter upper limit: ")
 low_limit = int(input())
 print('INTEGER  |      SQUARE       |     CUBE')
 print('----------------------------------------')
