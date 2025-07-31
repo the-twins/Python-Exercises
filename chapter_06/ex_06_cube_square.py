@@ -1,0 +1,10 @@
+print("Enter lower limit: ")
+low_limit = int(input())
+print("Enter upper limit: ")
+up_limit = int(input())
+print('INTEGER  |      SQUARE       |     CUBE')
+print('----------------------------------------')
+for i in range(low_limit, up_limit + 1):
+    print(i,'            ', end = '')
+    print(i ** 2, end = '')
+    print('              ', i ** 3)
