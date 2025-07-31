@@ -1,5 +1,10 @@
+import sys
+
 def result(first_numb: float, second_numb: float) -> float:
     """Return the value of the calculation"""
+    if(first_numb * second_numb == 0):
+        print('Error: Division by 0')
+        sys.exit(1)
     return (first_numb - second_numb) / (first_numb * second_numb)
     
 
