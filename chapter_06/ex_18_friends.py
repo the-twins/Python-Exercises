@@ -6,4 +6,4 @@ while(friends < DUNBAR):
     friends = (friends - out) * 2
     out += 1
     weeks += 1
-print("Professor had", friends, "friends in week", weeks)
+    print("Professor had", friends, "friends in week", weeks)
