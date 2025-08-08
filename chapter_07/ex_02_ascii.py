@@ -15,4 +15,5 @@ while True:
                 print()
     if(stop == True):
         break
+    numb = 0
     print()

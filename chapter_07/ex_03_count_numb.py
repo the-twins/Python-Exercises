@@ -21,5 +21,5 @@ else:
 if(count_numb_odd == 0):
     print("You can't divide by 0.")
 else:
-    print('The total number of odd integers =', count_numb_odd, 'the average value of the even '
+    print('The total number of odd integers =', count_numb_odd, 'the average value of the odd '
           'integers =', sum_odd_numb / count_numb_odd)
