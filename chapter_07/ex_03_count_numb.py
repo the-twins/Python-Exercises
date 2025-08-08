@@ -13,7 +13,13 @@ while True:
     if(numb % 2 != 0):
         count_numb_odd += 1
         sum_odd_numb += numb
-print('The total number of even integers =', count_numb_even, 'the average value of the even '
-      'integers =', sum_even_numb / count_numb_even)
-print('The total number of odd integers =', count_numb_odd, 'the average value of the even '
-      'integers =', sum_odd_numb / count_numb_odd)
+if(count_numb_even == 0):
+    print("You can't divide by 0.")
+else:
+    print('The total number of even integers =', count_numb_even, 'the average value of the even '
+          'integers =', sum_even_numb / count_numb_even)
+if(count_numb_odd == 0):
+    print("You can't divide by 0.")
+else:
+    print('The total number of odd integers =', count_numb_odd, 'the average value of the even '
+          'integers =', sum_odd_numb / count_numb_odd)
