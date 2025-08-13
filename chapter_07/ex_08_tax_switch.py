@@ -25,10 +25,6 @@ rate = 0
 while True:
     print_menu()
     numb = int(input())
-    if(numb == 5):
-        break
-    print('Enter the number of hours worked:')
-    hours = int(input())
     match numb:
         case 1:
             rate = HOURLY_RATE_1    
@@ -38,9 +34,13 @@ while True:
             rate = HOURLY_RATE_3
         case 4:
             rate = HOURLY_RATE_4
+        case 5:
+            break
         case _:  # This is the default case
             print(f'Unknown status code: {numb}. Try again:')
             continue
+    print('Enter the number of hours worked:')
+    hours = int(input())
     if(hours <= HOURS_PER_WEEK):
         total = hours * rate
     else:
