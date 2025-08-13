@@ -22,9 +22,11 @@ TAX_THIRD = 0.25
 HOURS_PER_WEEK = 40
 total = 0
 rate = 0
-print_menu()
-numb = int(input())
 while True:
+    print_menu()
+    numb = int(input())
+    if(numb == 5):
+        break
     print('Enter the number of hours worked:')
     hours = int(input())
     match numb:
@@ -36,12 +38,9 @@ while True:
             rate = HOURLY_RATE_3
         case 4:
             rate = HOURLY_RATE_4
-        case 5:
-            break
         case _:  # This is the default case
             print(f'Unknown status code: {numb}. Try again:')
-            numb = int(input())
-            continue 
+            continue
     if(hours <= HOURS_PER_WEEK):
         total = hours * rate
     else:
@@ -56,7 +55,4 @@ while True:
         tax = (TAX_FIRST_SUM * TAX_FIRST) + ( TAX_SECOND_SUM * TAX_SECOND) + ((total - OVER_TAX) * 
                TAX_THIRD)
     print('The gross pay =', total, 'the taxes =', tax, 'and the net pay =', total - tax)
-    print()    
-    print_menu()
-    numb = int(input())
-    
+    print()
