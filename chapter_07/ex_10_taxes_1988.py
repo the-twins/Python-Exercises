@@ -21,13 +21,13 @@ while True:
     numb = int(input())
     if(numb == 1):
         tax_break = TAX_BREAK_1
-    if(numb == 2):
+    elif(numb == 2):
         tax_break = TAX_BREAK_2
-    if(numb == 3):
+    elif(numb == 3):
         tax_break = TAX_BREAK_3
-    if(numb == 4):
+    elif(numb == 4):
         tax_break = TAX_BREAK_4
-    if(numb == 5):
+    elif(numb == 5):
         break
     else:
         print("Input error.")
