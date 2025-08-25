@@ -9,10 +9,18 @@ print("Uh...is your number", mid)
 ans = input()
 while(ans != 'y'):
     if(ans == 'h'):
+        if(mid == 99):
+            print("Well, then, is it 100?")
+            ans = input()
+            break
         min = mid
         mid += int((max - min) / 2)
         print("Well, then, is it", mid, "?")
     elif(ans == 'l'):
+        if(mid == 2):
+            print("Well, then, is it 1?")
+            ans = input()
+            break
         max = mid
         mid -= int((max - min) / 2)
         print("Well, then, is it", mid, "?")
