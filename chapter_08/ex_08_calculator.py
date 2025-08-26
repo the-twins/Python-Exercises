@@ -6,62 +6,42 @@ def print_menu():
     print("q. quit")
     
     
-def input_check()->float:
+def float_input() -> float:
     """Input validation and return values."""
+    print("Enter number: ")
     while True:
         try:
-            first_numb = float(input())
+            return float(input())
         except ValueError:
-            first_numb = None
-        if(first_numb == None):
             print("Input is not correct, please enter a number, such as 2.5, -1.78E8, or 3:")
-        else:
-            break
-    print("Enter a second float: ")
-    while True:
-        try:
-            second_numb = float(input())
-        except ValueError:
-            second_numb = None
-        if(second_numb == None):
-            print("Input is not correct, please enter a number, such as 2.5, -1.78E8, or 3:")
-        else:
-            break
-    return first_numb, second_numb
-            
     
-print_menu()   
-choice = input()
-while(choice != 'q'):
-    if(choice == 'a'):
-        print("Enter first number: ")
-        first, second = input_check()
-        print(first, "+", second, "=", first + second)
-    elif(choice == 's'):
-        print("Enter first number: ")
-        first, second = input_check()
-        print(first, "-", second, "=", first - second)
-    elif(choice == 'm'):
-        print("Enter first number: ")
-        first, second = input_check()
-        print(first, "*", second, "=", first * second)
-    elif(choice == 'd'):
-        print("Enter first number: ")
-        first, second = input_check()
-        if(second == 0):
-            print("Input error. You can't divide by 0. Enter a second float:")
-            try:
-                second = float(input())
-            except ValueError:
-                second = None
-            while(second == None):
-                print("Input error. Try entering the second float again:")
-                second = float(input())
-        print(first, "/", second, "=", first / second)
-    else:
-        print("Input error. Try again:")
-        choice = input()
-        continue
+
+def get_choice() -> str:
+    """Input validation and return values."""
     print_menu()
-    choice = input()
-print("Bye!")
+    while True:
+        choice = input()
+        if choice in ['a', 's', 'm', 'd', 'q']:  
+            return choice
+        print("Input error. Try again.")
+        print_menu()
+        
+        
+if __name__ == '__main__':
+    choice = get_choice()   
+    while(choice != 'q'):
+        first = float_input()
+        second = float_input()
+        if(choice == 'a'):
+            print(first, "+", second, "=", first + second)
+        elif(choice == 's'):
+            print(first, "-", second, "=", first - second)
+        elif(choice == 'm'):
+            print(first, "*", second, "=", first * second)
+        elif(choice == 'd'):
+            while(second == 0):
+                print("Input error. You can't divide by 0. Enter a second float:")
+                second = float_input()
+            print(first, "/", second, "=", first / second)
+        choice = get_choice()
+    print("Bye!")
