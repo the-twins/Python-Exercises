@@ -15,7 +15,7 @@ if __name__ == '__main__':
     j = int(input())
     if(i <= 0 or j <= 0):
         print('Input error. Bye.')
-    elif(i >= j):
+    elif(i > j):
         print('Input error. Bye.')
     else:
         chline(ch, i, j)
