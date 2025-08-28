@@ -1,9 +1,6 @@
 def harmonic(first: float, second: float) -> float:
     """Returns the harmonic mean of the two numbers"""
-    if((1 / first + 1 / second) == 0):
-        print("Input error. You can't divide by 0.")
-    else:
-        return 2 / (1 / first + 1 / second)
+    return 2 / (1 / first + 1 / second)
     
     
 if __name__ == '__main__':
@@ -11,7 +8,8 @@ if __name__ == '__main__':
     first = float(input())
     print('Enter second float:')
     second = float(input())
-    if(first == 0 or second == 0):
-        print('Input error. Bye.')
-    else:
+    try:
         print(round(harmonic(first, second), 2))
+    except ZeroDivisionError:
+        print("Input error. You can't divide by 0.")
+    
