@@ -4,6 +4,8 @@ def power(n: float, p: int) -> float:
     if(p >= 1):
         pow = n * power(n, p - 1)    
     if(p < 0):
+        if(n == 0):
+            return 0
         pow = 1 / n * power(n, p + 1)
     return pow
     
