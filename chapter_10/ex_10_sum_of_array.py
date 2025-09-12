@@ -1,6 +1,6 @@
 def sum_array(numb_first: list[int], numb_second: list[int], numb_third: list[int] ) -> list[int]:
     """Sets each element in an array to the sum of corresponding elements in two other arrays"""
-    for i in range(0, 4):
+    for i in range(0, len(numb_first)):
         numb_third.append(numb_first[i] + numb_second[i])
     return numb_third
     

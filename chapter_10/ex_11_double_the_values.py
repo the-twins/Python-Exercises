@@ -1,7 +1,11 @@
-def doub_array(numb: list[int]) -> list[int]:
+ROWS = 3
+COLS = 5
+
+
+def doub_array(numb: list[list[int]]) -> list[list[int]]:
     """Doubles all the values in array"""
-    for i in range(0, 3):
-        for j in range(0, 5):
+    for i in range(0, ROWS):
+        for j in range(0, COLS):
             numb[i][j] = numb[i][j] * 2
     return numb
     
