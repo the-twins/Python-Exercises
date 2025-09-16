@@ -12,13 +12,10 @@ def average_row(n: list[float]):
 
 def average_all(numb: list[list[float]]) -> float:
     """Computes the average of all the values and returns it"""
-    subtot = 0
     total = 0
     for i in range(0, ROWS):
         for j in range(0, COLS):
-            subtot += numb[i][j]
-        total += subtot
-        subtot = 0
+            total += numb[i][j]
     return round(total / (ROWS * COLS), 2)
     
     
@@ -31,7 +28,6 @@ def largest_value(numb: list[list[float]]) -> float:
     
 if __name__ == '__main__':
     numb = []
-    array =[]
     print('Create three sets of five float number each.')
     for i in range(0, ROWS):
         numb.append([])
