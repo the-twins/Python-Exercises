@@ -3,7 +3,7 @@ def one_word(some_text: str):
     word = []
     mark_word = False
     for i in some_text:
-        if i.isalpha() == True:
+        if i.isspace() == False:
             word.append(i)
             mark_word = True
         else:

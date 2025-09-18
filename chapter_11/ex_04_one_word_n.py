@@ -5,7 +5,7 @@ def one_word(some_text: str, numb: int):
     count = 0
     mark_word = False
     for i in some_text:
-        if i.isalpha() == True and count < n:
+        if i.isspace() == False and count < n:
             word.append(i)
             count += 1
             mark_word = True
