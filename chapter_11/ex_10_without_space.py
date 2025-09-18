@@ -1,12 +1,12 @@
 def del_space(some_text: str):
     """Takes a string as an argument and removes the spaces from the string."""
-    word = ""
+    word = []
     for i in some_text:
         if i.isspace() == True:
             continue
         else:
-            word += i   
-    print(word)
+            word.append(i)   
+    print(''.join(word))
     
     
 if __name__ == '__main__':
