@@ -1,4 +1,4 @@
-def one_word(some_text: list[str], numb: int):
+def one_word(some_text: str, numb: int):
     """ Reads the first word from a line of input an array and discards the rest of the line and
     accepts a second parameter specifying the maximum number of characters that can be read"""
     word = ""

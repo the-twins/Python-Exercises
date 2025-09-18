@@ -1,4 +1,4 @@
-def del_space(some_text: list[str]):
+def del_space(some_text: str):
     """Takes a string as an argument and removes the spaces from the string."""
     word = ""
     for i in some_text:
