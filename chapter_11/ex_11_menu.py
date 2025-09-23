@@ -23,10 +23,11 @@ def print_ascii(some_text: list[str]):
 def print_len_list(some_text: list[str]):
     """Prints the strings in order of increasing length."""
     sorted_len = sorted(some_text, key=len)
-    print(sorted_len)
+    for i in sorted_len:
+        print(i)
 
 
-def first_word(text: str)->int:
+def first_word(text: str) -> int:
     """Returns the length of the first word"""
     n = 0
     mark_word = False
@@ -43,7 +44,8 @@ def first_word(text: str)->int:
 def print_len_first_word(some_text: list[str]):
     """Print the strings in order of the length of the first word in the string."""
     sorted_len = sorted(some_text, key=first_word)
-    print(sorted_len)
+    for i in sorted_len:
+        print(i)
     
     
 if __name__ == '__main__':
@@ -56,16 +58,16 @@ if __name__ == '__main__':
         some_text.append(text)           
     while True:
         menu()
-        n = int(input())
-        if(n == 1):
+        n = input()
+        if(n == '1'):
             print_line(some_text)           
-        elif(n == 2):
+        elif(n == '2'):
             print_ascii(some_text)
-        elif(n == 3):
+        elif(n == '3'):
             print_len_list(some_text)
-        elif(n == 4):
+        elif(n == '4'):
             print_len_first_word(some_text)
-        elif(n == 5):
+        elif(n == '5'):
             break
         else:
             print('Input error. Try again.')
