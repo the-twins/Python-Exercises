@@ -12,7 +12,7 @@ if(len(sys.argv) == 1 or sys.argv[1] == '-p'):
         print(one_str)
 elif(sys.argv[1] == '-u'):
     for one_str in some_text:
-            print(one_str.upper())
+        print(one_str.upper())
 elif(sys.argv[1] == '-l'):
     for one_str in some_text:
-            print(one_str.lower())
+        print(one_str.lower())
