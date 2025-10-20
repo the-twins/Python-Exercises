@@ -4,5 +4,5 @@ if __name__ == '__main__':
     name = input()
     print('Enter your height in inches:')
     height = float(input())
-    print(f'{name} you are {height / INCH_IN_FEET} feet tall')
+    print(f'{name} you are {height / INCH_IN_FEET:.2f} feet tall')
     
