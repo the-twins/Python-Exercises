@@ -6,6 +6,7 @@ if __name__ == '__main__':
     n = len(name)
     s = len(surname)
     print(f'{name} {surname}')
-    print(f'{0:>{n}} {1:>{s}}'.format(n, s))
+    print(f'{n:>{n}} {s:>{s}}'.format(n, s))
     print(f'{name} {surname}')
-    print(f'{0:<{n}} {1:<{s}}'.format(n, s))
+    print(f'{n:<{n}} {s:<{s}}'.format(n, s))
+    
