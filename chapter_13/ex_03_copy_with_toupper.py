@@ -9,8 +9,8 @@ if __name__ == '__main__':
         with open(name, 'r') as f:
             some_text = f.read()
         with open(copy_name, 'w') as fc:
-                fc.write(some_text.upper())
-                print('Done')
+            fc.write(some_text.upper())
+            print('Done')
     except FileNotFoundError:
         print('Error. File not found')
         
