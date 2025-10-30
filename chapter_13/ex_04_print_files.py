@@ -11,6 +11,5 @@ if __name__ == '__main__':
                 some_data = f.read()
                 print(some_data)
     except FileNotFoundError:
-        print('Error. File not found')
-        sys.exit(1)       
+        print('Error. File', sys.argv[i],'not found')     
             
