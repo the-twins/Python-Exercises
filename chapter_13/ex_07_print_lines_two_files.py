@@ -13,12 +13,12 @@ if __name__ == '__main__':
                 if not line and not line_two:
                     break
                 if not line:
+                    print(line_two.replace('\n', ''))
                     continue
+                elif not line_two:
+                    print(line.replace('\n', ''))
                 else:
                     print(line.replace('\n', ''))
-                if not line_two:
-                    continue
-                else:
                     print(line_two.replace('\n', ''))
     except FileNotFoundError:
         print('Error. File not found')
