@@ -3,19 +3,17 @@ import random
 
 def rollem(numb_set: int, dice: int, sides: int):
     """Prints the result"""
-    random.seed()
-    random_integer = []
     one = 0
+    print('Here are', numb_set, 'sets of', dice, sides, end='-sides throws.\n')
     for i in range(0, numb_set):
         for j in range(0, dice):
-            one += random.randint(1, sides) + 1
-        random_integer.append(one)
+            one += random.randint(1, sides)
+        print(one, end=' ')
         one = 0
-    print('Here are', numb_set, 'sets of', dice, sides, end='-sides throws.')
-    print('\n',random_integer)
 
 
 if __name__ == '__main__':
+    random.seed()
     print('Enter the number of sets (q to stop): ')
     try:
         numb_set = int(input())
@@ -31,7 +29,7 @@ if __name__ == '__main__':
                 print('Need at least 1 die.')
                 break
             rollem(numb_set, dice, sides)
-            print('Enter the number of sets (q to stop): ')
+            print('\nEnter the number of sets (q to stop): ')
             numb_set = int(input())            
     except ValueError:
         print('GOOD FORTUNE TO YOU!')
